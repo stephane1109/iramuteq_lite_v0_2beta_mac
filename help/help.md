@@ -1,4 +1,6 @@
-## codeandcortex.fr - Stéphane Meurisse - v0_3beta - 09-04-2026
+## www.codeandcortex.fr
+<small>IRAMUTEQ LITE - Stéphane Meurisse - v0_3beta - 09-04-2026</small>
+
 - <a href="https://www.codeandcortex.fr" target="_blank" rel="noopener noreferrer">codeandcortex.fr</a>
 - <a href="https://www.codeandcortex.fr/comprendre-chd-methode-reinert/" target="_blank" rel="noopener noreferrer">Comprendre la CHD</a>
 
