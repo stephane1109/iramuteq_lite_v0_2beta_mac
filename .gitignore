@@ -1,0 +1,27 @@
+.DS_Store
+
+# Generated analysis outputs
+backend/jobs/
+
+# Node / Tauri build artifacts
+tauri-ui/node_modules/
+tauri-ui/src-tauri/target/
+
+# Packaged apps / archives
+*.app
+*.dmg
+*.zip
+*.msi
+*.exe
+
+# Python cache
+__pycache__/
+*.pyc
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Temporary local files
+tmp_*

@@ -1,0 +1,202 @@
+IRAMUTEQ LITE
+Notice d'installation et de lancement
+Version beta 0.2
+Date : 01-04-2026
+
+
+Ce document explique :
+
+- les prérequis nécessaires pour utiliser l'application ;
+- quels logiciels doivent être installés avant le premier lancement ;
+- si les packages R et Python doivent être installés manuellement ;
+- comment installer l'application ;
+- comment lancer l'application ;
+- comment lancer l'application depuis les sources du projet.
+
+
+==================================================
+1. PREREQUIS GENERAUX
+==================================================
+
+Pour faire fonctionner IRAMUTEQ Lite, la machine doit disposer de :
+
+1. R
+2. Python 3
+
+Pour une utilisation normale de l'application compilée (.dmg sur macOS, .exe à terme sur Windows), l'utilisateur n'a PAS besoin d'installer Node.js, npm ou Rust.
+
+En revanche, pour lancer l'application depuis les sources du projet, il faut aussi :
+
+- Node.js / npm
+- Rust / cargo
+- les outils de compilation du système
+
+
+==================================================
+2. LIENS OFFICIELS DE TELECHARGEMENT
+==================================================
+
+R :
+
+- site officiel R Project : https://www.r-project.org/
+- téléchargement macOS (CRAN) : https://cran.r-project.org/bin/macosx/
+- téléchargement Windows (CRAN) : https://cran.r-project.org/bin/windows/base/
+
+Python :
+
+- site officiel Python : https://www.python.org/
+- téléchargement macOS : https://www.python.org/downloads/macos/
+- téléchargement Windows : https://www.python.org/downloads/windows/
+
+
+==================================================
+3. CE QUE L'APPLICATION INSTALLE AUTOMATIQUEMENT
+==================================================
+
+Au premier lancement, l'application vérifie automatiquement les dépendances R et Python.
+
+Si la machine est connectée à Internet et que R + Python sont correctement installés, l'application tente d'installer automatiquement les packages nécessaires.
+
+En revanche, il doit déjà avoir R et Python installés ;
+si l'installation automatique échoue, les packages doivent être installés manuellement.
+
+
+==================================================
+4. PACKAGES R UTILISES PAR L'APPLICATION
+==================================================
+
+L'application vérifie / installe automatiquement les packages R suivants :
+
+- jsonlite
+- quanteda
+- Matrix
+- dplyr
+- wordcloud
+- RColorBrewer
+- FactoMineR
+- igraph
+- proxy
+- htmltools
+- topicmodels
+- irlba
+- factoextra
+
+
+==================================================
+5. PACKAGES PYTHON UTILISES PAR L'APPLICATION
+==================================================
+
+L'application utilise Python pour certaines sorties LDA, notamment :
+
+- numpy
+- scikit-learn
+- matplotlib
+- pyLDAvis
+- wordcloud
+
+Important :
+
+- ces packages sont installés automatiquement si possible au premier lancement ;
+- si l'installation automatique échoue, il faut les installer manuellement / 
+
+Dans le terminal de votre éditeur de code : pip Install numpy scikit-learn matplotlib pyLDAvis wordcloud
+
+
+==================================================
+6. INSTALLATION CONSEILLEE POUR UN UTILISATEUR MAC (.DMG)
+==================================================
+
+ETAPE 1 - Installer R
+
+1. Aller sur :
+   https://cran.r-project.org/bin/macosx/
+2. Télécharger la version stable la plus récente de R.
+3. Installer R normalement.
+4. Vérifier ensuite dans le Terminal :
+
+   Rscript --version
+
+
+ETAPE 2 - Installer Python 3
+
+1. Aller sur :
+   https://www.python.org/downloads/macos/
+2. Télécharger un installateur officiel Python 3.
+3. Installer Python.
+4. Vérifier ensuite dans le Terminal :
+
+   python3 --version
+
+
+ETAPE 3 - Installer l'application
+
+1. Ouvrir le fichier .dmg.
+2. Glisser l'application IRaMuTeQ Lite dans le dossier Applications.
+3. Ouvrir l'application depuis Applications.
+
+Si macOS bloque l'ouverture la première fois :
+
+1. faire un clic droit sur l'application ;
+2. choisir "Ouvrir" ;
+3. confirmer l'ouverture.
+
+
+ETAPE 4 - Premier lancement
+
+Au premier lancement :
+
+- l'application vérifie R ;
+- l'application vérifie Python ;
+- l'application vérifie les packages nécessaires ;
+- elle tente d'installer automatiquement les packages manquants.
+
+
+==================================================
+8. SI L'INSTALLATION AUTOMATIQUE DES PACKAGES ECHOUE
+==================================================
+
+Installation manuelle des packages R :
+
+Ouvrir le Terminal puis lancer :
+
+Rscript -e "install.packages(c('jsonlite','quanteda','Matrix','dplyr','wordcloud','RColorBrewer','FactoMineR','igraph','proxy','htmltools','topicmodels','irlba','factoextra'), repos='https://cloud.r-project.org')"
+
+
+Installation manuelle des packages Python :
+
+Ouvrir le Terminal puis lancer :
+
+python3 -m pip install --user numpy scikit-learn matplotlib pyLDAvis wordcloud
+
+
+==================================================
+9. COMMENT LANCER L'APPLICATION UTILISATEUR
+==================================================
+
+Une fois l'application installée :
+
+1. ouvrir IRaMuTeQ Lite ;
+2. attendre la vérification des dépendances au démarrage ;
+3. importer un fichier texte ;
+4. lancer l'analyse souhaitée (CHD, LDA, similitudes, etc.).
+
+
+
+==================================================
+10. RESUME
+==================================================
+
+Pour un utilisateur final :
+
+1. installer R ;
+2. installer Python 3 ;
+3. ouvrir le .dmg ;
+4. copier l'application dans Applications ;
+5. lancer l'application ;
+6. laisser le premier démarrage installer les packages automatiquement.
+
+En principe, l'utilisateur n'a pas besoin d'installer les packages à la main.
+En pratique, si l'installation automatique échoue, il faut installer manuellement :
+
+- en R : jsonlite, quanteda, Matrix, dplyr, wordcloud, RColorBrewer, FactoMineR, igraph, proxy, htmltools, topicmodels, irlba, factoextra
+- en Python : numpy, scikit-learn, matplotlib, pyLDAvis, wordcloud
