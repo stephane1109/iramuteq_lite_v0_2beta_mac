@@ -355,7 +355,7 @@ fn is_text_path(path: &Path) -> bool {
 fn resolve_help_path(app: &AppHandle, relative_path: &str) -> Result<PathBuf, String> {
     let requested = Path::new(relative_path);
     if requested.is_absolute() {
-        return Err("Le chemin d'aide doit être relatif au dossier help/.".to_string());
+        return Err("Le chemin d'aide doit être relatif au dossier help/ ou images/.".to_string());
     }
     if requested
         .components()
@@ -364,7 +364,13 @@ fn resolve_help_path(app: &AppHandle, relative_path: &str) -> Result<PathBuf, St
         return Err("Le chemin d'aide est invalide.".to_string());
     }
 
-    Ok(project_root(app)?.join("help").join(requested))
+    let project = project_root(app)?;
+    let requested_str = relative_path.replace('\\', "/");
+    if let Some(stripped) = requested_str.strip_prefix("images/") {
+        return Ok(project.join("images").join(stripped));
+    }
+
+    Ok(project.join("help").join(requested))
 }
 
 fn collect_artifact_files(dir: &Path, root: &Path, out: &mut Vec<ArtifactFile>) -> Result<(), String> {

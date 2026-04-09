@@ -8,7 +8,7 @@ Le dictionnaire **lexique_fr** utilisé ici est celui d’**IRaMuTeQ**, et il se
 
 > Contrairement au logiciel IRaMuTeQ (où les catégories des formes sont interprétés comme `1 = active` et `2 = supplémentaire`), le filtrage proposé ici est **binaire**.
 
-![Exemple : clés d'analyse logiciel IRaMuTeQ](cles_analyse_iramuteq.png)
+![Exemple : clés d'analyse logiciel IRaMuTeQ](images/cles_analyse_iramuteq.png)
 
 Deux configurations principales dans l'interface sont possibles :
 1. Si vous **ne cochez pas** le filtrage morphosyntaxique, **tout le corpus** est pris en compte.

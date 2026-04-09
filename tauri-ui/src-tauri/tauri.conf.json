@@ -33,6 +33,7 @@
       "../../backend/": "backend",
       "../../dictionnaires/": "dictionnaires",
       "../../help/": "help",
+      "../../images/": "images",
       "../../iramuteqlite/": "iramuteqlite",
       "../../lda/": "lda"
     },

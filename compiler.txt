@@ -1,0 +1,74 @@
+Compilation de IRaMuTeQ Lite
+============================
+
+Le projet se compile depuis le dossier : tauri-iramuteq-lite/tauri-ui
+
+
+1. Prérequis
+------------
+
+Pour compiler l'application, il faut au minimum :
+
+- Node.js et npm
+- Rust (cargo / rustup)
+
+Selon la plateforme :
+
+- macOS : compilation du .app sur Mac
+- Windows : compilation du .exe sur Windows
+
+Important :
+
+- le build doit être lancé depuis le dossier tauri-ui
+
+
+2. Build macOS
+--------------
+
+Depuis le terminal :
+
+cd NOM_REPERTOIRE_DU_SCRIPT/tauri-ui
+npm install
+npm run build -- --bundles app
+
+Si npm install a déjà été fait :
+
+cd NOM_REPERTOIRE_DU_SCRIPT/tauri-ui
+npm run build -- --bundles app
+
+
+
+3. Build Windows
+----------------
+
+Le build Windows doit être fait sur une machine Windows.
+
+Depuis un terminal Windows, dans le projet :
+
+cd NOM_REPERTOIRE_DU_SCRIPT\tauri-ui
+npm install
+npm run build -- --bundles nsis
+
+Si npm install a déjà été fait :
+
+cd NOM_REPERTOIRE_DU_SCRIPT\tauri-ui
+npm run build -- --bundles nsis
+
+Sortie attendue :
+
+tauri-ui\src-tauri\target\release\bundle\nsis\
+
+Le fichier produit est en général un installateur .exe.
+
+Remarques :
+
+- sur Windows, il faut généralement avoir les outils de compilation C++ installés
+- le plus simple est d'utiliser :
+  Visual Studio Build Tools
+- il faut aussi avoir Rust installé sur Windows
+
+
+4. Si on est sur Mac mais qu'on veut un .exe Windows
+----------------------------------------------------
+
+- utiliser GitHub Actions pour faire le build Windows
